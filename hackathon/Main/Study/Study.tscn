@@ -1,0 +1,135 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/bengrraas-regular/Bengrraas Regular/Bengrraas Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Main/Study/Study.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 165
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 90
+font_data = ExtResource( 3 )
+
+[node name="Study" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1086.0
+margin_bottom = 1929.0
+color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+margin_top = 131.0
+margin_right = 1086.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Study"
+align = 1
+valign = 1
+
+[node name="FoodLabel" type="Label" parent="CanvasLayer"]
+margin_top = 872.0
+margin_right = 1080.0
+margin_bottom = 1011.0
+custom_colors/font_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Food?"
+align = 1
+valign = 1
+
+[node name="Drive" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 617.0
+margin_top = 1279.0
+margin_right = 929.0
+margin_bottom = 1482.0
+toggle_mode = true
+text = "Drive"
+
+[node name="Cancel" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 208.0
+margin_top = 1664.0
+margin_right = 497.0
+margin_bottom = 1815.0
+rect_rotation = -0.0539722
+focus_mode = 2
+custom_colors/font_color = Color( 0.615686, 0.262745, 0.247059, 1 )
+text = "Cancel"
+
+[node name="Indoor" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 617.0
+margin_top = 580.0
+margin_right = 929.0
+margin_bottom = 783.0
+focus_mode = 2
+toggle_mode = true
+text = "Indoor"
+
+[node name="YesFood" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 223.0
+margin_top = 1050.0
+margin_right = 428.0
+margin_bottom = 1191.0
+focus_mode = 2
+toggle_mode = true
+text = "Yes"
+
+[node name="Walk" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 152.0
+margin_top = 1279.0
+margin_right = 464.0
+margin_bottom = 1482.0
+focus_mode = 2
+toggle_mode = true
+text = "Walk"
+
+[node name="Outdoor" parent="CanvasLayer" groups=["environmentGroup"] instance=ExtResource( 1 )]
+margin_left = 152.0
+margin_top = 580.0
+margin_right = 464.0
+margin_bottom = 783.0
+focus_mode = 2
+toggle_mode = true
+text = "Outdoor"
+
+[node name="NoFood" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 651.0
+margin_top = 1050.0
+margin_right = 856.0
+margin_bottom = 1191.0
+focus_mode = 2
+toggle_mode = true
+text = "No"
+
+[node name="Enter" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 584.0
+margin_top = 1664.0
+margin_right = 873.0
+margin_bottom = 1815.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.239216, 0.627451, 0.192157, 1 )
+text = "Enter"
+
+[node name="InvalidLabel" type="Label" parent="CanvasLayer"]
+margin_top = 1520.0
+margin_right = 1080.0
+margin_bottom = 1616.0
+custom_colors/font_color = Color( 0.647059, 0.0980392, 0.0980392, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Invalid Input"
+align = 1
+valign = 1
+percent_visible = 0.0
+
+[connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Indoor" to="." method="_on_Indoor_pressed"]
+[connection signal="pressed" from="CanvasLayer/Enter" to="." method="_on_Enter_pressed"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="EmptyButton" type="Button"]
+margin_right = 755.0
+margin_bottom = 430.0
+custom_styles/normal = SubResource( 1 )
+toggle_mode = true

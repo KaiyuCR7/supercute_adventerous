@@ -1,0 +1,136 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/bengrraas-regular/Bengrraas Regular/Bengrraas Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Main/Food/Food.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 165
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 90
+font_data = ExtResource( 3 )
+
+[node name="Food" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1095.0
+margin_bottom = 1933.0
+color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+margin_left = 3.0
+margin_top = 158.0
+margin_right = 1091.0
+margin_bottom = 503.0
+custom_colors/font_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Food"
+align = 1
+valign = 1
+
+[node name="FoodGenre" type="Label" parent="CanvasLayer"]
+margin_top = 460.0
+margin_right = 1095.0
+margin_bottom = 595.0
+custom_colors/font_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Genre:"
+align = 1
+valign = 1
+
+[node name="Italian" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 253.0
+margin_top = 595.0
+margin_right = 540.0
+margin_bottom = 817.0
+toggle_mode = true
+text = "Italian"
+
+[node name="Mexican" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 253.0
+margin_top = 817.0
+margin_right = 540.0
+margin_bottom = 1039.0
+focus_mode = 2
+toggle_mode = true
+text = "Mexican"
+
+[node name="Asian" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 540.0
+margin_top = 595.0
+margin_right = 827.0
+margin_bottom = 817.0
+focus_mode = 2
+toggle_mode = true
+text = "Asian"
+
+[node name="American" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 540.0
+margin_top = 817.0
+margin_right = 827.0
+margin_bottom = 1039.0
+focus_mode = 2
+toggle_mode = true
+text = "American"
+
+[node name="Walk" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 169.0
+margin_top = 1170.0
+margin_right = 456.0
+margin_bottom = 1392.0
+focus_mode = 2
+toggle_mode = true
+text = "Walk"
+
+[node name="Drive" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 624.0
+margin_top = 1170.0
+margin_right = 911.0
+margin_bottom = 1392.0
+focus_mode = 2
+toggle_mode = true
+text = "Drive"
+
+[node name="Cancel" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 208.0
+margin_top = 1633.0
+margin_right = 497.0
+margin_bottom = 1784.0
+rect_rotation = -0.0539722
+focus_mode = 2
+custom_colors/font_color = Color( 0.615686, 0.262745, 0.247059, 1 )
+text = "Cancel"
+
+[node name="Enter" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_left = 584.0
+margin_top = 1633.0
+margin_right = 873.0
+margin_bottom = 1784.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.239216, 0.627451, 0.192157, 1 )
+text = "Enter"
+
+[node name="InvalidLabel" type="Label" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 1480.0
+margin_right = 1088.0
+margin_bottom = 1576.0
+custom_colors/font_color = Color( 0.647059, 0.0980392, 0.0980392, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Invalid Input"
+align = 1
+valign = 1
+percent_visible = 0.0
+
+[connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Enter" to="." method="_on_Enter_pressed"]

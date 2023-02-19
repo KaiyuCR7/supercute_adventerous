@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Main/Results.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/bengrraas-regular/Bengrraas Regular/Bengrraas Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Main/Button.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 65
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+font_data = ExtResource( 3 )
+
+[node name="Results" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1087.0
+margin_bottom = 1927.0
+color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+margin_left = 3.0
+margin_top = 176.0
+margin_right = 1090.0
+margin_bottom = 501.0
+custom_colors/font_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Top Picks"
+align = 1
+valign = 1
+
+[node name="Results" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 128.0
+margin_top = 440.0
+margin_right = 960.0
+margin_bottom = 1848.0
+custom_colors/default_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+custom_fonts/bold_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="HomeBtn" parent="CanvasLayer" instance=ExtResource( 4 )]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 336.0
+margin_bottom = 160.0
+text = "Home"
+
+[connection signal="pressed" from="CanvasLayer/HomeBtn" to="." method="_on_HomeBtn_pressed"]

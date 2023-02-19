@@ -1,0 +1,155 @@
+{
+    "Chinook Student Center": {
+        "ActivityLevel": "Any",
+        "Address": "Chinook Student Center, 700 NE Thatuna St, Pullman, WA 99164",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "American",
+        "Name": "Chinook Student Center",
+        "Noise": "Silent"
+    },
+    "CUB Compton Union Building": {
+        "ActivityLevel": "None",
+        "Address": "WSU Campus, CUB Compton Union Building, Glenn Terrell Mall, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Indoor",
+        "FoodType": "American/Asian/Mexican/Greek",
+        "Name": "CUB Compton Union Building",
+        "Noise": "Chatter"
+    },
+    "Engineering Library": {
+        "ActivityLevel": "None",
+        "Address": "Owen Science and Engineering Library, 185 NE College Ave, Pullman, WA 99163",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "None",
+        "Name": "Engineering Library",
+        "Noise": "Silent"
+    },
+    "Flix Cafe": {
+        "ActivityLevel": "None",
+        "Address": "Flix Cafe, Washington State University, Pullman, WA 99163",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "American",
+        "Name": "Flix Cafe",
+        "Noise": "Quiet"
+    },
+    "Headwaters Trailhead": {
+        "ActivityLevel": "Medium",
+        "Address": "Headwaters Trailhead, 3443 Foothill Rd, Moscow, ID 83843",
+        "Distance": "Driving",
+        "Environment": "Outdoor",
+        "FoodType": "N/A",
+        "Name": "Headwaters Trailhead",
+        "Noise": "Low"
+    },
+    "Hillside Cafe": {
+        "ActivityLevel": "None",
+        "Address": "Hillside Cafe, 650 NE Campus St, Pullman, WA 99163",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "American",
+        "Name": "Hillside Cafe",
+        "Noise": "Quiet"
+    },
+    "Krugel Park": {
+        "ActivityLevel": "Medium",
+        "Address": "Kruegel Park, 705 SE Dilke St, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Outdoor",
+        "FoodType": "N/A",
+        "Name": "Krugel Park",
+        "Noise": "Loud"
+    },
+    "Minh's Restaurant": {
+        "ActivityLevel": "None",
+        "Address": "Minh's Restaurant, 102 NW Stadium Way, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Indoor",
+        "FoodType": "Asian",
+        "Name": "Minh's Restaurant",
+        "Noise": "Chatter"
+    },
+    "Mod Pizza": {
+        "ActivityLevel": "None",
+        "Address": "MOD Pizza, 710 Pullman Rd, Moscow, ID 83843",
+        "Distance": "Driving",
+        "Environment": "Indoor",
+        "FoodType": "Italian",
+        "Name": "Mod Pizza",
+        "Noise": "Chatter"
+    },
+    "Northside Cafe": {
+        "ActivityLevel": "None",
+        "Address": "Northside Cafe, 1580 NE Cougar Way, Pullman, WA 99164",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "American",
+        "Name": "Northside Cafe",
+        "Noise": "Quiet"
+    },
+    "Rancho Viejo": {
+        "ActivityLevel": "None",
+        "Address": "Rancho Viejo, 170 S Grand Ave, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Indoor",
+        "FoodType": "Mexican",
+        "Name": "Tin Tan Tacos",
+        "Noise": "Chatter"
+    },
+    "Southside Cafe": {
+        "ActivityLevel": "None",
+        "Address": "Southside Cafe, 1395 NE Stadium Way, Pullman, WA 99163",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "American",
+        "Name": "Southside Cafe",
+        "Noise": "Quiet"
+    },
+    "Student Recreation Center": {
+        "ActivityLevel": "High",
+        "Address": "Student Recreation Center, 1105 North Fairway Dr., Student Recreation Center, Student Recreation Center, Pullman, WA 99164",
+        "Distance": "Walking",
+        "Environment": "Indoor/Outdoor",
+        "FoodType": "None",
+        "Name": "Student Recreation Center",
+        "Noise": "Loud"
+    },
+    "Taqueira Las Torres": {
+        "ActivityLevel": "None",
+        "Address": "Taqueria Las Torres, 110 NE Whitman St, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Outdoor",
+        "FoodType": "Mexican",
+        "Name": "Taqueira Las Torres",
+        "Noise": "Chatter"
+    },
+    "Tin Tan Tacos": {
+        "ActivityLevel": "None",
+        "Address": "Tin Tan Tacos, 600 NE Colorado St ste 100 a, Pullman, WA 99163",
+        "Distance": "Driving",
+        "Environment": "Indoor",
+        "FoodType": "Mexican",
+        "Name": "Tin Tan Tacos",
+        "Noise": "Chatter"
+    },
+    "Valley Road Playfield": {
+        "ActivityLevel": "High",
+        "Address": "Valley Road Playfield, 1915 NE Valley Rd, Pullman, WA 99163",
+        "Distance": "Walking",
+        "Environment": "Outdoor",
+        "FoodType": "None",
+        "Name": "Valley Road Playfield",
+        "Noise": "Loud"
+    },
+    "WSU Library": {
+        "ActivityLevel": "None",
+        "Address": "Washington State University Libraries, 140 Glenn Terrell Mall, Pullman, WA 99164",
+        "Distance": "Walking",
+        "Environment": "Indoor",
+        "FoodType": "None",
+        "Name": "WSU Library",
+        "Noise": "Silent"
+    }
+}
