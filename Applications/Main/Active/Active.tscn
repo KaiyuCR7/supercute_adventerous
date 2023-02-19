@@ -1,25 +1,56 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/vegan-style-font/VeganStylePersonalUse-5Y58.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/bengrraas-regular/Bengrraas Regular/Bengrraas Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Main/Active/Active.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 120
+size = 165
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 90
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0.392157 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 border_color = Color( 0.847059, 0.588235, 0.831373, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.423529, 0.423529, 0.423529, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0.392157 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.847059, 0.588235, 0.831373, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Active" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -56,6 +87,7 @@ margin_left = 152.0
 margin_top = 480.0
 margin_right = 464.0
 margin_bottom = 683.0
+custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 3 )
 toggle_mode = true
 enabled_focus_mode = 0
@@ -66,6 +98,8 @@ margin_left = 616.0
 margin_top = 480.0
 margin_right = 928.0
 margin_bottom = 683.0
+custom_styles/hover = SubResource( 5 )
+toggle_mode = true
 text = "Indoor"
 
 [node name="Activity1" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -73,6 +107,7 @@ margin_left = 324.0
 margin_top = 1004.0
 margin_right = 468.0
 margin_bottom = 1144.0
+toggle_mode = true
 text = "1"
 
 [node name="Activity2" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -81,6 +116,7 @@ margin_top = 1004.0
 margin_right = 612.0
 margin_bottom = 1144.0
 focus_mode = 2
+toggle_mode = true
 text = "2"
 
 [node name="Activity3" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -89,6 +125,7 @@ margin_top = 1004.0
 margin_right = 756.0
 margin_bottom = 1144.0
 focus_mode = 2
+toggle_mode = true
 text = "3"
 
 [node name="Walk" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -97,6 +134,7 @@ margin_top = 1315.0
 margin_right = 464.0
 margin_bottom = 1518.0
 focus_mode = 2
+toggle_mode = true
 text = "Walk"
 
 [node name="Drive" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -105,6 +143,7 @@ margin_top = 1315.0
 margin_right = 928.0
 margin_bottom = 1518.0
 focus_mode = 2
+toggle_mode = true
 text = "Indoor"
 
 [node name="Enter" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -114,3 +153,5 @@ margin_right = 684.0
 margin_bottom = 1804.0
 focus_mode = 2
 text = "Enter"
+
+[connection signal="pressed" from="CanvasLayer/Enter" to="." method="_on_Enter_pressed"]
